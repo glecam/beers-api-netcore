@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using Beers.API.Data;
 using Beers.API.Exceptions;
 using Beers.API.Models;
+using Beers.API.Repositories.Interfaces;
+using Beers.API.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace Beers.API.Repositories
@@ -33,20 +35,19 @@ namespace Beers.API.Repositories
             return beer;
         }
 
-        public async Task<Beer> Update(int id, Beer beer)
+        public async Task<Beer> Update(int id, BeerDto beer)
         {
             var persistedBeer = await GetById(id);
-            if (persistedBeer == null) throw new NotFoundException();
+            if (persistedBeer == null) return null;
 
-            persistedBeer.BreweryId = beer.BreweryId;
-            persistedBeer.Name = beer.Name;
-            persistedBeer.Rating = beer.Rating;
+            if (beer.Rating.HasValue)
+                persistedBeer.Rating = beer.Rating.Value;
 
-            _context.Beers.Update(beer);
+            _context.Beers.Update(persistedBeer);
 
             await _context.SaveChangesAsync();
 
-            return beer;
+            return persistedBeer;
         }
 
         public async Task Delete(int id)

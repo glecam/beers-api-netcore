@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using Beers.API.Extensions;
 using Beers.API.Repositories;
+using Beers.API.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
-using Beers.API.Repositories;
+using Beers.API.Repositories.Interfaces;
+using Beers.API.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Beers.API.Controllers
@@ -30,14 +31,15 @@ namespace Beers.API.Controllers
             return Ok(data);
         }
 
-        // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public async Task<IActionResult> Put(int id, [FromBody]BeerDto beer)
         {
+            var updatedBeer = await _repository.Update(id, beer);
+            if (updatedBeer == null) return NotFound();
 
+            return Ok(updatedBeer);
         }
 
-        // DELETE api/values/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
