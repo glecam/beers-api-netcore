@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using Beers.API.Extensions;
+using Beers.API.Middleware;
 using Beers.API.Repositories;
 using Beers.API.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
@@ -55,6 +56,8 @@ namespace Beers.API
             });
 
             app.UseCors("AllowAll");
+
+            app.UseMiddleware(typeof(ExceptionHandlerMiddleware));
 
             app.UseMvc();
         }
