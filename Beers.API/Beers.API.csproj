@@ -5,9 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pics\Full\" />
-    <Folder Include="Pics\Thumbnail\" />
-    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\img\full\" />
+    <Folder Include="wwwroot\img\thumbnail\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +15,29 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\img\full\Blauw.png" />
+    <None Include="wwwroot\img\full\Chouffe.png" />
+    <None Include="wwwroot\img\full\Duvel.png" />
+    <None Include="wwwroot\img\full\Jupiler.png" />
+    <None Include="wwwroot\img\full\Karmeliet.png" />
+    <None Include="wwwroot\img\full\Kwak.png" />
+    <None Include="wwwroot\img\full\Omer.png" />
+    <None Include="wwwroot\img\full\Oude Caert.png" />
+    <None Include="wwwroot\img\full\Stella.png" />
+    <None Include="wwwroot\img\full\Vedett.png" />
+    <None Include="wwwroot\img\thumbnail\Blauw.png" />
+    <None Include="wwwroot\img\thumbnail\Chouffe.png" />
+    <None Include="wwwroot\img\thumbnail\Duvel.png" />
+    <None Include="wwwroot\img\thumbnail\Jupiler.png" />
+    <None Include="wwwroot\img\thumbnail\Karmeliet.png" />
+    <None Include="wwwroot\img\thumbnail\Kwak.png" />
+    <None Include="wwwroot\img\thumbnail\Omer.png" />
+    <None Include="wwwroot\img\thumbnail\Oude Caert.png" />
+    <None Include="wwwroot\img\thumbnail\Stella.png" />
+    <None Include="wwwroot\img\thumbnail\Vedett.png" />
   </ItemGroup>
 
 </Project>

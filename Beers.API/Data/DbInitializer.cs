@@ -25,16 +25,16 @@ namespace Beers.API.Data
             context.SaveChanges();
             context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT Breweries OFF");
 
-            context.Beers.AddOrUpdate(new Beer { Id = 1, Name = "Duvel", Rating = 5, BreweryId = 1, ImageUrl = $"/pics/full/Duvel.png", ThumbnailImageUrl = $"/pics/thumbnail/Duvel.png" });
-            context.Beers.AddOrUpdate(new Beer { Id = 2, Name = "La Chouffe", Rating = 5, BreweryId = 2, ImageUrl = $"/pics/full/Chouffe.png", ThumbnailImageUrl = $"/pics/thumbnail/Chouffe.png" });
-            context.Beers.AddOrUpdate(new Beer { Id = 3, Name = "Kwak", Rating = 5, BreweryId = 3, ImageUrl = $"/pics/full/Kwak.png", ThumbnailImageUrl = $"/pics/thumbnail/Kwak.png" });
-            context.Beers.AddOrUpdate(new Beer { Id = 4, Name = "Stella", Rating = 5, BreweryId = 4, ImageUrl = $"/pics/full/Stella.png", ThumbnailImageUrl = $"/pics/thumbnail/Stella.png" });
-            context.Beers.AddOrUpdate(new Beer { Id = 5, Name = "Oude Caert", Rating = 5, BreweryId = 5, ImageUrl = $"/pics/full/Oude Caert.png", ThumbnailImageUrl = $"/pics/thumbnail/Oude Caert.png" });
-            context.Beers.AddOrUpdate(new Beer { Id = 6, Name = "Tripel Karmeliet", Rating = 5, BreweryId = 6, ImageUrl = $"/pics/full/Karmeliet.png", ThumbnailImageUrl = $"/pics/thumbnail/Karmeliet.png" });
-            context.Beers.AddOrUpdate(new Beer { Id = 7, Name = "Jupiler", Rating = 5, BreweryId = 4, ImageUrl = $"/pics/full/Jupiler.png", ThumbnailImageUrl = $"/pics/thumbnail/Jupiler.png" });
-            context.Beers.AddOrUpdate(new Beer { Id = 8, Name = "Omer", Rating = 5, BreweryId = 7, ImageUrl = $"/pics/full/Omer.png", ThumbnailImageUrl = $"/pics/thumbnail/Omer.png" });
-            context.Beers.AddOrUpdate(new Beer { Id = 9, Name = "Vedett", Rating = 5, BreweryId = 1, ImageUrl = $"/pics/full/Vedett.png", ThumbnailImageUrl = $"/pics/thumbnail/Vedett.png" });
-            context.Beers.AddOrUpdate(new Beer { Id = 10, Name = "Blauw", Rating = 5, BreweryId = 7, ImageUrl = $"/pics/full/Blauw.png", ThumbnailImageUrl = $"/pics/thumbnail/Blauw.png" });
+            context.Beers.AddOrUpdate(new Beer { Id = 1, Name = "Duvel", Rating = 5, BreweryId = 1, ImageUrl = $"/img/full/Duvel.png", ThumbnailImageUrl = $"/img/thumbnail/Duvel.png" });
+            context.Beers.AddOrUpdate(new Beer { Id = 2, Name = "La Chouffe", Rating = 5, BreweryId = 2, ImageUrl = $"/img/full/Chouffe.png", ThumbnailImageUrl = $"/img/thumbnail/Chouffe.png" });
+            context.Beers.AddOrUpdate(new Beer { Id = 3, Name = "Kwak", Rating = 5, BreweryId = 3, ImageUrl = $"/img/full/Kwak.png", ThumbnailImageUrl = $"/img/thumbnail/Kwak.png" });
+            context.Beers.AddOrUpdate(new Beer { Id = 4, Name = "Stella", Rating = 5, BreweryId = 4, ImageUrl = $"/img/full/Stella.png", ThumbnailImageUrl = $"/img/thumbnail/Stella.png" });
+            context.Beers.AddOrUpdate(new Beer { Id = 5, Name = "Oude Caert", Rating = 5, BreweryId = 5, ImageUrl = $"/img/full/Oude Caert.png", ThumbnailImageUrl = $"/img/thumbnail/Oude Caert.png" });
+            context.Beers.AddOrUpdate(new Beer { Id = 6, Name = "Tripel Karmeliet", Rating = 5, BreweryId = 6, ImageUrl = $"/img/full/Karmeliet.png", ThumbnailImageUrl = $"/img/thumbnail/Karmeliet.png" });
+            context.Beers.AddOrUpdate(new Beer { Id = 7, Name = "Jupiler", Rating = 5, BreweryId = 4, ImageUrl = $"/img/full/Jupiler.png", ThumbnailImageUrl = $"/img/thumbnail/Jupiler.png" });
+            context.Beers.AddOrUpdate(new Beer { Id = 8, Name = "Omer", Rating = 5, BreweryId = 7, ImageUrl = $"/img/full/Omer.png", ThumbnailImageUrl = $"/img/thumbnail/Omer.png" });
+            context.Beers.AddOrUpdate(new Beer { Id = 9, Name = "Vedett", Rating = 5, BreweryId = 1, ImageUrl = $"/img/full/Vedett.png", ThumbnailImageUrl = $"/img/thumbnail/Vedett.png" });
+            context.Beers.AddOrUpdate(new Beer { Id = 10, Name = "Blauw", Rating = 5, BreweryId = 7, ImageUrl = $"/img/full/Blauw.png", ThumbnailImageUrl = $"/img/thumbnail/Blauw.png" });
 
             context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT Beers ON");
             context.SaveChanges();

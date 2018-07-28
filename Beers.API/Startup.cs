@@ -48,12 +48,7 @@ namespace Beers.API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-                    Path.Combine(Directory.GetCurrentDirectory(), "Pics")),
-                RequestPath = "/Pics"
-            });
+            app.UseStaticFiles();
 
             app.UseCors("AllowAll");
 
